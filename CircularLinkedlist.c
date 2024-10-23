@@ -121,3 +121,41 @@ void delet(struct node * q, int num) {
       } while (c != 6);
       getch();
     }
+
+    Algorithm for Singly Linked List Operations
+
+
+Define a node structure with int data and struct node *link.
+Global Pointer:
+
+Initialize a global pointer p as NULL (head of the list).
+Append Function (append(struct node *q, int num)):
+
+If q is NULL, create the first node and assign it to p.
+Otherwise, traverse to the end and append a new node with num.
+Insert at Beginning (inbegin(struct node *q, int num)):
+
+If q is NULL, print "List does not exist".
+Otherwise, create a new node with num and set its link to p. Update p to this new node.
+Delete Function (delet(struct node *q, int num)):
+
+Traverse the list, keeping track of prev and curr.
+If curr->data equals num, adjust pointers to delete the node.
+Print status of deletion.
+Count Function (count(struct node *q)):
+
+If q is NULL, print "List does not exist".
+Otherwise, count nodes by traversing until NULL and print the count.
+Display Function (display(struct node *q)):
+
+If q is NULL, print "List does not exist".
+Otherwise, print each node's data until the end of the list.
+Main Function:
+
+Loop for user input to choose operations (1-6):
+1: Call append().
+2: Call inbegin().
+3: Call delet().
+4: Call count().
+5: Call display().
+Exit on 6.

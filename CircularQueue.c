@@ -91,3 +91,37 @@ int main() {
     } while (c != 4);
     return 0;
 }
+
+
+Circular Queue Algorithm (Sorted)
+Initialize:
+
+Create an array queue[SIZE].
+Set front (f) and rear (r) to -1.
+Check if Empty:
+
+Return 1 if f == -1, else return 0.
+Check if Full:
+
+Return 1 if f == 0 && r == SIZE - 1 or f == r + 1, else return 0.
+Insert:
+
+If full, print "Circular Queue Overflow".
+If empty, set f = r = 0, insert the element.
+If r reaches end, wrap around (r = 0).
+Otherwise, increment r and insert.
+Delete:
+
+If empty, print "Circular Queue Empty".
+If f == r, reset (f = r = -1).
+If f reaches end, wrap around (f = 0).
+Otherwise, increment f.
+Display:
+
+If empty, print "Circular Queue Empty".
+If f <= r, print from f to r.
+If f > r, print from f to end and from start to r.
+Main Loop:
+
+Present menu for insert, delete, display, or exit.
+Loop until exit choice is made.

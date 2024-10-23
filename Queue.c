@@ -61,3 +61,44 @@ int main() {
   } while (c != 4);
   return 0;
 }
+
+
+
+Algorithm for Queue using Array
+Initialize Queue:
+
+Set front = -1 and rear = -1 to indicate the queue is empty.
+Check if Queue is Empty (isEmpty):
+
+If front == -1, return true (the queue is empty).
+Otherwise, return false.
+Check if Queue is Full (isFull):
+
+If rear == SIZE - 1, return true (the queue is full).
+Otherwise, return false.
+Insert Operation (insert):
+
+If isFull() is true, print "Queue Overflow."
+Otherwise:
+If isEmpty() is true, set front = 0 (indicating the first element is being added).
+Increment rear by 1.
+Set queue[rear] = x, where x is the element to be inserted.
+Delete Operation (delete):
+
+If isEmpty() is true, print "Queue Empty."
+Otherwise:
+If front == rear, set both front and rear to -1 (queue becomes empty).
+Otherwise, increment front by 1 to remove the front element.
+Display Queue (display):
+
+If isEmpty() is true, print "Queue Empty."
+Otherwise:
+Iterate from index front to rear.
+Print each element queue[i] for i in the range [front, rear].
+Main Process:
+
+Continuously offer options to:
+Insert an element into the queue.
+Display the elements in the queue.
+Delete an element from the queue.
+Exit the loop when the user chooses to exit.

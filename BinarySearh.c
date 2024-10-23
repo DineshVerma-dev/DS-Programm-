@@ -30,3 +30,23 @@ int main() {
     return 0;
 }
 
+
+Algorithm for BinarySearch
+
+Step 1: set low = lower_bound, high = upper_bound, pos = - 1  
+Step 2: repeat steps 3 and 4 while beg <=end  
+Step 3: set mid = (low + hig)/2  
+Step 4: if a[mid] = val  
+set pos = mid  
+print pos  
+go to step 6  
+else if a[mid] > val  
+set high = mid - 1  
+else  
+set low = mid + 1  
+
+Step 5: if pos = -1  
+print "value is not present in the array"  
+
+Step 6: exit  
+

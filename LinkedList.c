@@ -143,3 +143,41 @@ void display_list() {
     }
     printf("NULL\n");
 }
+
+
+Algorithm for Linked List Operations
+Initialize List:
+
+Set head = NULL.
+Insert at Beginning:
+
+Allocate memory for a new node.
+Set data of the new node from user input.
+Set new_node->next to head.
+Update head to new_node.
+Insert at End:
+
+Allocate memory for a new node.
+Set data from user input and new_node->next = NULL.
+If list is empty (head == NULL), set head = new_node.
+Otherwise, traverse to the last node and set last_node->next = new_node.
+Delete Node:
+
+If list is empty, print error.
+Get value to delete from user.
+Traverse the list to find the node.
+Adjust pointers to remove the node and free memory.
+Search Node:
+
+If list is empty, print error.
+Get value to search from user.
+Traverse the list to find the node.
+Print position if found; otherwise, print not found message.
+Display List:
+
+If list is empty, print error.
+Traverse the list and print each node’s value, ending with NULL.
+Main Process:
+
+Provide menu options for user actions.
+Execute corresponding operations based on user choice.

@@ -36,3 +36,31 @@ void dfs(int k) {
         }
     }
 }
+
+Algorithm for Depth First Search (DFS) in a Graph
+Initialize Variables:
+
+Declare v for the number of vertices.
+Create a 2D array adj for the adjacency matrix.
+Create an array visited to track visited vertices.
+Input Graph:
+
+Prompt the user for the number of vertices.
+For each vertex, input the adjacency information to fill the adj matrix.
+Initialize Visited Array:
+
+Set all values in the visited array to 0.
+Perform DFS:
+
+For each vertex:
+If it has not been visited, call the dfs function.
+DFS Function (dfs(int k)):
+
+Mark vertex k as visited.
+Print the visited vertex.
+For each adjacent vertex j:
+If adj[k][j] is 1 (indicating an edge) and visited[j] is 0:
+Recursively call dfs(j).
+End:
+
+Return control to the main function after completion.

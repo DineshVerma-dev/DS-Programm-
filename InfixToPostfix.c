@@ -58,3 +58,36 @@ int main() {
   puts(postfix);
   return 0;
 }
+
+Algorithm for Infix to Postfix Conversion
+Initialize Variables:
+
+Create infix array to store the input expression.
+Create postfix array to store the converted expression.
+Create stack array to hold operators.
+Set top = -1 (to track the top of the stack) and j = -1 (to track the position in postfix).
+Read Infix Expression:
+
+Input the infix expression from the user.
+Iterate Through Each Character:
+
+For each character c in infix:
+If c is '(':
+Push c onto the stack.
+If c is an operand (number):
+Append c to postfix.
+If c is ')':
+Pop from the stack to postfix until '(' is found.
+If c is an operator (+, -, *, /):
+While the stack is not empty and the priority of the operator at the top of the stack is greater than or equal to the priority of c:
+Pop the top of the stack to postfix.
+Push c onto the stack.
+Pop Remaining Operators:
+
+After processing all characters, pop any remaining operators from the stack to postfix.
+Terminate Postfix String:
+
+Set the last character of postfix to '\0' to terminate the string.
+Output Result:
+
+Print the converted postfix expression.
